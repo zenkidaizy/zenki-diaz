@@ -270,6 +270,22 @@ ul li {
         transition: 0.2s ease-in-out;
     }
 
+    #mobile-menu .menu-bar {
+        transition: all 0.3s ease-in-out;
+    }
+
+    #mobile-menu.open .menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.open .menu-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.open .menu-bar:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
 }
 
 /* Widths 550px & Below */
