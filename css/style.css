@@ -169,9 +169,19 @@ nav a:hover {
     color: var(--violet);
 }
 
-/* ===== 720px below ===== */
+/* ===== 1050px below ===== */
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1050px) {
+
+    nav {
+        width: 40%;
+    }
+
+}
+
+/* ===== 830px below ===== */
+
+@media screen and (max-width: 830px) {
 
     .header {
         display: block;
