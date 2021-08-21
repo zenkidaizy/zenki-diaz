@@ -26,6 +26,11 @@ h1 {
     color: var(--white);
 }
 
+h2 {
+    font: 2.5rem 'Dancing Script', cursive;
+    color: var(--white);
+}
+
 /* Hero Section */
 
 header {
@@ -84,9 +89,10 @@ header {
     border-radius: 50%;
     padding: 7px 5px;
 
-    position: absolute;
+    position: fixed;
+    top: 1vw;
     right: 1vw;
-    z-index: 1;
+    z-index: 6;
 }
 
 .hamburger-menu:hover {
@@ -97,7 +103,7 @@ header {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--magenta);
+    background-color: var(--lightgreen);
     margin: 5px;
     transition: all 0.2s ease-in-out;
 }
@@ -122,8 +128,10 @@ nav {
     background-color: var(--lightgreen);
     height: 100%;
     width: 50%;
+    z-index: 3;
 
-    position: absolute;
+    position: fixed;
+    top: 0;
     right: 0;
     transform: translateX(100%);
     transition: all 0.3s ease;
@@ -167,6 +175,64 @@ nav a:hover {
 
 .violet {
     color: var(--violet);
+}
+
+.move {
+    top: 50%;
+}
+
+.magenta-bars {
+    background-color: var(--violet);
+}
+
+/* Recent Works */
+
+.recent-works {
+    background-color: var(--magenta);
+    padding: 3vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.featured-image {
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.featured-image:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-out;
+}
+
+.recent-works-copy {
+    padding: 5vw;
+    color: var(--white);
+    line-height: 1.5;
+
+    display: grid;
+    align-content: center;
+    gap: 10px;
+}
+
+.recent-works-btn {
+    font: 1.5rem 'Dancing Script', cursive;
+    color: var(--white);
+    background-color: var(--violet);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+
+    justify-self: start;
+    transform: rotate(-10deg);
+    transition: transform 0.2s ease-out;
+}
+
+.recent-works-btn:hover {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-out;
 }
 
 /* ===== 1050px below ===== */
@@ -215,6 +281,26 @@ nav a:hover {
         width: 99vw;
     }
 
+    /* Recent Works */
+
+    .recent-works {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        padding: 30px;
+    }
+
+}
+
+/* ===== 565px below ===== */
+
+@media screen and (max-width: 565px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
 }
 
 /* ===== 500px below ===== */
@@ -238,6 +324,10 @@ nav a:hover {
 
     .green-smudge {
         opacity: 1;
+    }
+
+    .featured-image {
+        padding: 0;
     }
 
 }

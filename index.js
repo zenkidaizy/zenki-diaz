@@ -2,8 +2,9 @@
 
 const navMenu = document.querySelector('.hamburger-menu');
 const heading = document.querySelector('h1');
+const header = document.querySelector('header');
 
-// Navigation
+// Hamburger Menu
 
 navMenu.addEventListener('click', () => {
     const navBar = document.querySelector('nav');
@@ -17,7 +18,17 @@ navMenu.addEventListener('click', () => {
     greenSmudge.classList.toggle('opacity');
     violetSmudge.classList.toggle('disappear');
     heading.classList.toggle('violet');
-})
+});
 
-// Hero Section
+// Nav Menu Position on Scroll
 
+observer = new IntersectionObserver((entry, observer) => {
+    const menuBars = document.querySelectorAll('.menu-bar');
+
+    navMenu.classList.toggle('move');
+    menuBars.forEach(bar => {
+        bar.classList.toggle('magenta-bars');
+    });
+}, {threshold: 0.6});
+
+observer.observe(header);
