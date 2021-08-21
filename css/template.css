@@ -14,9 +14,14 @@ html {
 }
 
 body {
-    background: var(--white) url("/images/bg-image.png") no-repeat right bottom;
+    background: var(--magenta) url("/images/bg-image.png") no-repeat right bottom;
     background-attachment: fixed;
     font-family: 'Lora', serif;
+    padding: 2vw 4vw;
+}
+
+img {
+    width: 100%;
 }
 
 /* Typography */
@@ -24,63 +29,12 @@ body {
 h1 {
     font: 4.5rem 'Dancing Script', cursive;
     color: var(--white);
+    text-align: center;
 }
 
 h2 {
     font: 2.5rem 'Dancing Script', cursive;
     color: var(--white);
-}
-
-/* Hero Section */
-
-header {
-    min-height: 100vh;
-    padding: 1vw;
-    position: relative;
-    overflow-x: hidden;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-}
-
-.title-background {
-    transform: rotate(-5deg);
-    z-index: -1;
-    width: 100%;
-}
-
-#mobile-title {
-    display: none;
-}
-
-.green-smudge {
-    opacity: 0;
-    transform: rotate(-40deg);
-    z-index: -1;
-}
-
-.hero-section {
-    display: grid;
-    place-items: center;
-    place-content: center;
-    gap: 1.5vw;
-}
-
-.title {
-    display: grid;
-    grid-template: 1fr / 1fr;
-    place-items: center;
-}
-
-.title > * {
-    grid-area: 1 / 1 / -1 / -1;
-}
-
-.description {
-    color: var(--magenta);
-    line-height: 1.5;
-    font-weight: 500;
 }
 
 /* Navigation */
@@ -186,56 +140,6 @@ nav a:hover {
     background-color: var(--violet);
 }
 
-/* Recent Works */
-
-.recent-works {
-    background-color: var(--magenta);
-    padding: 3vw;
-    min-height: 100vh;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-}
-
-.featured-image {
-    width: 100%;
-    transition: all 0.2s ease-out;
-}
-
-.featured-image:hover {
-    transform: scale(1.02);
-    transition: all 0.2s ease-out;
-}
-
-.recent-works-copy {
-    padding: 5vw;
-    color: var(--white);
-    line-height: 1.5;
-
-    display: grid;
-    align-content: center;
-    gap: 10px;
-}
-
-.recent-works-btn {
-    font: 1.5rem 'Dancing Script', cursive;
-    color: var(--white);
-    background-color: var(--violet);
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-
-    justify-self: start;
-    transform: rotate(-10deg);
-    transition: transform 0.2s ease-out;
-}
-
-.recent-works-btn:hover {
-    transform: rotate(0deg);
-    transition: transform 0.2s ease-out;
-}
-
 /* ===== 1050px below ===== */
 
 @media screen and (max-width: 1050px) {
@@ -246,20 +150,11 @@ nav a:hover {
 
 }
 
+/* NEW SECTION HERE */
+
 /* ===== 830px below ===== */
 
 @media screen and (max-width: 830px) {
-
-    .header {
-        display: block;
-        margin: 0 auto;
-        width: 90vw;
-    }
-
-    .hero-section {
-        width: 90vw;
-        grid-gap: 8vw;
-    }
 
     .hamburger-menu {
         top: 3vw;
@@ -278,20 +173,6 @@ nav a:hover {
         font-size: 15vw;
     }
 
-    .title-background {
-        width: 99vw;
-    }
-
-    /* Recent Works */
-
-    .recent-works {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-image {
-        padding: 30px;
-    }
-
 }
 
 /* ===== 565px below ===== */
@@ -300,35 +181,6 @@ nav a:hover {
 
     h2 {
         font-size: 2rem;
-    }
-
-}
-
-/* ===== 500px below ===== */
-
-@media screen and (max-width: 500px) {
-
-    #desktop-title {
-        display: none;
-    }
-
-    #mobile-title {
-        display: block;
-        line-height: 1;
-        font-size: 4rem;
-        color: var(--violet);
-    }
-
-    .title-background {
-        display: none;
-    }
-
-    .green-smudge {
-        opacity: 1;
-    }
-
-    .featured-image {
-        padding: 0;
     }
 
 }

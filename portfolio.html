@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenki's Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png?">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9009a9e7ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Hero Section & Navigation -->
+    <header>
+
+        <div class="hamburger-menu">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Services</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Portfolio -->
+
+    <main>
+
+        <h1>Portfolio</h1>
+
+        <div class="portfolio">
+            
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+            <a href="#" class="portfolio-piece">
+                <img src="images/placeholder-square.jpg" class="portfolio-image" alt="">
+                <img src="images/read-work.jpg" class="read-work" alt="">
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- <section class="recent-works">
+        <img src="images/portfolio-featured-img.jpg" class="featured-image" alt="Travel Blog Post">
+        <div class="recent-works-copy">
+            <h2>Recent Works</h2>
+            <p>I'm the go-to writer for your lifestyle brand! I cover topics from health and relationships to beauty and travel, and I write for blogs, emails, product descriptions, and website copy.</p>
+            <a href="#" class="recent-works-btn">Portfolio</a>
+        </div>
+    </section> -->
+
+</div>
+
+<script>
+    const navMenu = document.querySelector('.hamburger-menu');
+    const heading = document.querySelector('h1');
+    const header = document.querySelector('header');
+
+    // Hamburger Menu
+
+    navMenu.addEventListener('click', () => {
+        const navBar = document.querySelector('nav');
+        const heroSection = document.querySelector('.hero-section');
+        const greenSmudge = document.querySelector('.green-smudge');
+        const violetSmudge = document.querySelector('.title-background');
+
+        navMenu.classList.toggle('open');
+        navBar.classList.toggle('active');
+        heroSection.classList.toggle('shift');
+        greenSmudge.classList.toggle('opacity');
+        violetSmudge.classList.toggle('disappear');
+        heading.classList.toggle('violet');
+    });
+</script>
+
+</body>
+</html>
