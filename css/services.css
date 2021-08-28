@@ -18,7 +18,6 @@ body {
     background: linear-gradient(90deg, rgba(153,26,55,1) 0%, rgba(251,243,228,1) 38%);
     background-attachment: fixed;
     font-family: 'Lora', serif;
-    margin-bottom: 50px;
 }
 
 /* Typography */
@@ -36,9 +35,17 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 li {
     list-style: disc inside;
     margin: 0 0 10px 5px;
+}
+
+strong {
+    font-weight: 600;
 }
 
 /* Navigation */
@@ -114,6 +121,11 @@ nav a:hover {
 .active {
     transform: translateX(0);
     transition: all 0.3s ease;
+}
+
+.to-white {
+    background-color: #FBF3E4;
+    color: #FBF3E4;
 }
 
 /*===== Back to Top Button =====*/
@@ -281,6 +293,74 @@ nav a:hover {
     font: 500 14px 'Poppins', sans-serif;
 }
 
+/* Custom Needs */
+
+.custom-needs-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.custom-needs-content-left {
+    display: grid;
+    align-content: center;
+}
+
+.custom-needs-content-left img {
+    width: 100%;
+}
+
+.custom-needs-content-right {
+    padding: 2vw 10vw;
+
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Work Process */
+
+#work-process {
+    margin-top: 50px;
+    padding: 5vw;
+    background: linear-gradient(140deg, rgba(153,26,55,1) 0%, rgba(95,23,127,1) 100%);
+}
+
+.work-process-title {
+    color: var(--white);
+}
+
+.work-process-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 3vw;
+}
+
+.work-process-card {
+    background-color: rgba(255,255,255,0.1);
+    padding: 3vw;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.work-process-card h3 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--lightgreen);
+}
+
+.process-step {
+    font: 500 1rem 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.process-details,
+.process-details ~ ul {
+    font: 300 14px 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
 /* ===== 1050px below ===== */
 
 @media screen and (max-width: 1050px) {
@@ -335,6 +415,18 @@ nav a:hover {
     .service-img {
         width: 50%;
         margin: 0 auto;
+    }
+
+    /* Custom Needs */
+
+    .custom-needs-content {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .custom-needs-content-left img {
+        width: 50%;
+        justify-self: center;
     }
 
 }
@@ -416,6 +508,16 @@ nav a:hover {
 
     .fa-arrow-circle-down {
         transform: translate(-50%, 100%);
+    }
+
+}
+
+/* ===== 280px below ===== */
+
+@media screen and (max-width: 280px) {
+
+    .form-select select {
+        font-size: 12.1px;
     }
 
 }
