@@ -190,6 +190,23 @@ nav a:hover {
     transition: all 0.2s ease-out;
 }
 
+/*===== Contact Section =====*/
+
+.contact-details {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 100%;
+    padding-top: 50px;
+    gap: 30px;
+    height: 80vh;
+}
+
+.email-address {
+    color: var(--white);
+    font-size: 6vw;
+}
+
 
 
 /* ===== 1050px below ===== */

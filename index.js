@@ -3,6 +3,7 @@
 const navMenu = document.querySelector('.hamburger-menu');
 const heading = document.querySelector('h1');
 const header = document.querySelector('header');
+const testimonials = document.getElementById('testimonials');
 
 // Hamburger Menu
 
@@ -32,3 +33,14 @@ observer = new IntersectionObserver((entry, observer) => {
 }, {threshold: 0.6});
 
 observer.observe(header);
+
+testimonialsObserver = new IntersectionObserver((entry, observer) => {
+    const menuBars = document.querySelectorAll('.menu-bar');
+
+    navMenu.classList.toggle('move');
+    menuBars.forEach(bar => {
+        bar.classList.toggle('magenta-bars');
+    });
+}, {threshold: 0});
+
+testimonialsObserver.observe(testimonials);
