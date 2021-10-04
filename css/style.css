@@ -84,6 +84,18 @@ header {
     font-weight: 500;
 }
 
+.cta {
+    background-color: #BFFFA5;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+}
+
 /* Navigation */
 
 .hamburger-menu {
@@ -378,6 +390,11 @@ nav a:hover {
 
     .featured-image {
         padding: 0;
+    }
+
+    .cta {
+        background-color: var(--violet);
+        color: var(--white);
     }
 
     /* Testimonials */
