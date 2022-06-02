@@ -4,6 +4,7 @@ const navMenu = document.querySelector('.hamburger-menu');
 const heading = document.querySelector('h1');
 const header = document.querySelector('header');
 const testimonials = document.getElementById('testimonials');
+const cta = document.querySelector('.cta');
 
 // Hamburger Menu
 
@@ -19,6 +20,7 @@ navMenu.addEventListener('click', () => {
     greenSmudge.classList.toggle('opacity');
     violetSmudge.classList.toggle('disappear');
     heading.classList.toggle('violet');
+    cta.classList.toggle('cta-toggle');
 });
 
 // Nav Menu Position on Scroll

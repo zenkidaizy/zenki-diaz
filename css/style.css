@@ -199,6 +199,11 @@ nav a:hover {
     background-color: var(--violet);
 }
 
+.cta-open {
+    background-color: var(--violet);
+    color: var(--white);
+}
+
 /* Recent Works */
 
 .recent-works {
